@@ -40,6 +40,19 @@ function findMatches(wordToMatch, cities){
 // create display function that is called whenever the value changes in the input field
 function displayMatches(){
   console.log(this.value);
+  const matchArray = findMatches(this.value, cities);
+  console.log(matchArray); 
+  // now loop over 
+  const html = matchArray.map(place => {
+    return `
+    <li>
+      <span class="name">${place.city}, ${place.state}</span>
+      <span class="population">${place.population}</span>
+    </li>
+    `;
+  // .map will return an array with multiple items, but to turn it into one big string
+  }).join('');
+  suggestions.innerHTML = html;
 }
 
 // classes found through form
