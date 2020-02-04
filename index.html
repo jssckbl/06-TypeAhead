@@ -37,6 +37,13 @@ function findMatches(wordToMatch, cities){
   });
 }
 
+// function to display commas and was copied from online search
+function numberWithCommas(x){
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+
+
 // create display function that is called whenever the value changes in the input field
 function displayMatches(){
   console.log(this.value);
@@ -52,7 +59,7 @@ function displayMatches(){
     return `
     <li>
       <span class="name">${cityName}, ${stateName}</span>
-      <span class="population">${place.population}</span>
+      <span class="population">${numberWithCommas(place.population)}</span>
     </li>
     `;
   // .map will return an array with multiple items, but to turn it into one big string

@@ -5,4 +5,4 @@ using JavaScript and CSS. When a user starts to type in the text input box, the 
 states to select from and display matches. The city and state information that comes up is being pulled from an external source
 that is a JSON file.
 
-This process uses FETCH
+![new typed in input with matching cities and states dropped below](typeAheadFinal.png)
